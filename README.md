@@ -3,9 +3,13 @@
 Summary:
 
 Grouped DataFrame: The code begins by creating a DataFrame that identifies the maximum time point for each mouse.
+
 Merging DataFrames: .pyp then merges this grouped DataFrame with the original cleaned DataFrame to get the final tumor volumes.
+
 List and Dictionary: A list of the treatment names is created, and an empty dictionary is set up to hold the tumor volumes for each treatment.
+
 Looping and Appending: The code loops through each treatment, extracting the corresponding tumor volumes and appending them to the dictionary.
+
 Outlier Detection: Finally, .pyp calculates the quartiles, IQR, and determines if there are any outliers based on the calculated bounds.
 
 Explanation of the Print Section:
