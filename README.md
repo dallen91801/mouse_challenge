@@ -30,24 +30,25 @@ SCATTER PLOT: This plot shows the relationship between mouse weight and the aver
 
 I had diffiulty with adding the regression line to the scatter graph due to creating the scatter graph first, then creating the regression analysis.   The key was to create both graph codes within the same cell in order that both graphs would be produeced.  
 
-  # Group by Mouse ID to calculate the average tumor volume and weight per mouse
+#Group by mouse ID to calculate the average tumor volume and weight per mouse
 avg_tumor_volume = capomulin_data.groupby("Mouse ID")[["Weight (g)", "Tumor Volume (mm3)"]].mean()
 
-# Perform linear regression
+
+#perform linear regression
 slope, intercept, r_value, p_value, std_err = linregress(
     avg_tumor_volume["Weight (g)"], avg_tumor_volume["Tumor Volume (mm3)"])
 
-# Generate the scatter plot
+#generate the scatter plot
 plt.figure(figsize=(8, 5))
 plt.scatter(avg_tumor_volume["Weight (g)"], avg_tumor_volume["Tumor Volume (mm3)"], color='blue', label='Data points')
 
-# Plot the linear regression line
+#plot the linear regression line
 plt.plot(avg_tumor_volume["Weight (g)"], intercept + slope * avg_tumor_volume["Weight (g)"], color='red', label='Fit line')
 
-**END**
+#End
 
-LINEAR REGRESSION LINE: The linear regression line is plotted on top of the scatter plot using plt.plot(), with the equation of the line derived from the slope and intercept values.
+Linear regression line: The linear regression line is plotted on top of the scatter plot using plt.plot(), with the equation of the line derived from the slope and intercept values.
 
-MODIFICATIONS
+#Modifications
 Plot Customization: The plot is customized with a title, axis labels, a legend, and a grid for better visualization.
 Statistics: The slope, intercept, r-squared value, p-value, and standard error are printed out after the plot is shown.
