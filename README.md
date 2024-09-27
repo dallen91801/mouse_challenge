@@ -56,3 +56,4 @@ Linear regression line: The linear regression line is plotted on top of the scat
 #Modifications
 Plot Customization: The plot is customized with a title, axis labels, a legend, and a grid for better visualization.
 Statistics: The slope, intercept, r-squared value, p-value, and standard error are printed out after the plot is shown.
+# PostgreSQL
